@@ -5,8 +5,15 @@ import "fmt"
 func main() {
 	cards := newDeck()
 
-	hand, remainingDeck := deal(cards, 5)
+	//hand, remainingDeck := deal(cards, 5)
+	//
+	//fmt.Println(hand)
+	//fmt.Println(remainingDeck)
 
-	fmt.Println(hand)
-	fmt.Println(remainingDeck)
+	//fmt.Println(cards.toString())
+	err := cards.saveToFile("/tmp/cards.txt")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
 }
