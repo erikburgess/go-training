@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	cards := newDeck()
+	//cards := newDeck()
 
 	//hand, remainingDeck := deal(cards, 5)
 	//
@@ -11,9 +11,13 @@ func main() {
 	//fmt.Println(remainingDeck)
 
 	//fmt.Println(cards.toString())
-	err := cards.saveToFile("/tmp/cards.txt")
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
+	//err := cards.saveToFile("/tmp/cards.txt")
+	//if err != nil {
+	//	fmt.Println(err)
+	//	return
+	//}
+
+	deck := newDeckFromFile("/tmp/cards.txt")
+	fmt.Println(deck)
+
 }
