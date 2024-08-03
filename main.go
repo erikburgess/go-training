@@ -3,5 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Hello world")
+	fmt.Println()
+}
+
+type laptopSize float64
+
+func (l laptopSize) getSizeOfLaptop() laptopSize {
+	return l
 }
